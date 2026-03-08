@@ -1,0 +1,7 @@
+PyQt6
+notebook
+numpy
+matplotlib
+pandas
+ipywidgets
+torch
