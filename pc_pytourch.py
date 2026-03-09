@@ -113,6 +113,7 @@ def make_model_IPFCE():  #Is polygonal fence Center-Enclosing
 
 class TensorData(Dataset):
     def __init__(self, input_tensor, label_tensor):
+        self.model.to('cuda') 
         self.input = input_tensor
         self.labels = label_tensor
 
