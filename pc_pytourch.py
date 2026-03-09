@@ -277,14 +277,14 @@ data_nd_test_x = data_nd_test[['0','1','2','3','4','5','6','7']]
 data_nd_test_y = data_nd_test['area']
 data_nd_test_L = data_nd_test['CE']
 
-tensor_nd_train_x = torch.from_numpy(data_nd_train_x.to_numpy().copy()).type(torch.float32) #x
-tensor_nd_train_y = torch.from_numpy(data_nd_train_y.to_numpy().copy()).type(torch.float32) #y
-tensor_nd_train_L = torch.from_numpy(data_nd_train_L.to_numpy().copy()).type(torch.float32) #label
+tensor_nd_train_x = torch.from_numpy(data_nd_train_x.to_numpy().copy()).type(torch.float32).to('cuda') #x
+tensor_nd_train_y = torch.from_numpy(data_nd_train_y.to_numpy().copy()).type(torch.float32).to('cuda') #y
+tensor_nd_train_L = torch.from_numpy(data_nd_train_L.to_numpy().copy()).type(torch.float32).to('cuda') #label
 tensor_nd_train = (tensor_nd_train_x,tensor_nd_train_y,tensor_nd_train_L)
 
-tensor_nd_test_x = torch.from_numpy(data_nd_test_x.to_numpy().copy()).type(torch.float32)
-tensor_nd_test_y = torch.from_numpy(data_nd_test_y.to_numpy().copy()).type(torch.float32)
-tensor_nd_test_L = torch.from_numpy(data_nd_test_L.to_numpy().copy()).type(torch.float32)
+tensor_nd_test_x = torch.from_numpy(data_nd_test_x.to_numpy().copy()).type(torch.float32).to('cuda') 
+tensor_nd_test_y = torch.from_numpy(data_nd_test_y.to_numpy().copy()).type(torch.float32).to('cuda')
+tensor_nd_test_L = torch.from_numpy(data_nd_test_L.to_numpy().copy()).type(torch.float32).to('cuda')
 tensor_nd_test = (tensor_nd_test_x,tensor_nd_test_y,tensor_nd_test_L)
 
 #tensor_nh_train = torch.from_numpy(data_nh_train.to_numpy() )
