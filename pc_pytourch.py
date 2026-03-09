@@ -13,7 +13,6 @@ torch.manual_seed(10101010) # because we randomly sort the data inside the data 
 
 
 width = 10
-model = make_model_MAEBAPF(10)
 epochs = 100
 print_every = 1
 lr = 5e-3
@@ -100,7 +99,7 @@ def make_model_MAEBAPF(width = 8):  #Maximum area enclosed by a polygonal fence
     ) # with this model we are going for a dimension less one
 
 
-    def make_model_IPFCE():  #Is polygonal fence Center-Enclosing
+def make_model_IPFCE():  #Is polygonal fence Center-Enclosing
     return nn.Sequential(
         nn.Linear(8, width, bias=True),
         nn.ReLU(),
@@ -300,6 +299,7 @@ tensor_nd_test = (tensor_nd_test_x,tensor_nd_test_y,tensor_nd_test_L)
 
 
 
+model = make_model_MAEBAPF(width)
 labels = False
 loss_fn = nn.MSELoss() # same loss function as in assignment 1
 loss_fn = nn.L1Loss() # different loss function dont know which one to use
