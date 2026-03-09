@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import torch
 from torch.utils.data import DataLoader, Dataset
 from torch import manual_seed, nn, no_grad, optim
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = 'cuda'  
 torch.set_default_device(device)
 
 torch.manual_seed(10101010) # because we randomly sort the data inside the data loader
