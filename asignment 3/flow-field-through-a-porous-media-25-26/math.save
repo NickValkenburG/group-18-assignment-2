@@ -1,0 +1,1 @@
+sqrt((PSCD.VD - DCM.VWD)^2 + (PSCD.VE - DCM.VWE)^2 + (PSCD.VN - DCM.VWN)^2 )
